@@ -1,0 +1,1 @@
+const r="https://checkout.razorpay.com/v1/checkout.js";let t=null,e=null;const o=()=>t?Promise.resolve(t):e||(e=new Promise(((o,n)=>{const c=document.createElement("script");c.src=r,c.async=!0,c.onload=()=>{t=window.Razorpay,o(t)},c.onerror=()=>{e=null,n(new Error(wp.i18n.__("Failed to load Razorpay script.","surecart")))},document.head.appendChild(c)})),e);export{o as l};

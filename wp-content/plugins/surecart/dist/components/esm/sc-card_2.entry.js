@@ -1,0 +1,52 @@
+import { r as registerInstance, h, a as getElement } from './index-745b6bec.js';
+
+const scCardCss = ":host{display:block;--overflow:visible}.card{font-family:var(--sc-font-sans);overflow:var(--overflow);display:block}.card:not(.card--borderless){padding:var(--sc-card-padding, var(--sc-spacing-large));background:var(--sc-card-background-color, var(--sc-color-white));border:1px solid var(--sc-card-border-color, var(--sc-color-gray-300));border-radius:var(--sc-card-border-radius, var(--sc-input-border-radius-medium));box-shadow:var(--sc-shadow-small)}.card:not(.card--borderless).card--no-padding{padding:0}.title--divider{display:none}.card--has-title-slot .card--title{font-weight:var(--sc-font-weight-bold);line-height:var(--sc-line-height-dense)}.card--has-title-slot .title--divider{display:block}::slotted(*){margin-bottom:var(--sc-form-row-spacing)}::slotted(*:first-child){margin-top:0}::slotted(*:last-child){margin-bottom:0 !important}";
+const ScCardStyle0 = scCardCss;
+
+const ScCard = class {
+    constructor(hostRef) {
+        registerInstance(this, hostRef);
+        this.noDivider = undefined;
+        this.borderless = undefined;
+        this.noPadding = undefined;
+        this.href = undefined;
+        this.loading = undefined;
+        this.hasTitleSlot = undefined;
+    }
+    componentWillLoad() {
+        this.handleSlotChange();
+    }
+    handleSlotChange() {
+        this.hasTitleSlot = !!this.el.querySelector('[slot="title"]');
+    }
+    render() {
+        const Tag = this.href ? 'a' : 'div';
+        return (h(Tag, { key: 'd36f7f3d4bc505ec8444b873f326c1bb264183f5', part: "base", class: {
+                'card': true,
+                'card--borderless': this.borderless,
+                'card--no-padding': this.noPadding,
+            } }, h("slot", { key: '4d9287db1df7a0e6dc3f329640cc5c7b8716d5bc' })));
+    }
+    get el() { return getElement(this); }
+};
+ScCard.style = ScCardStyle0;
+
+const scDashboardModuleCss = ":host{display:block;position:relative}.dashboard-module{display:grid;gap:var(--sc-dashboard-module-spacing, 1em)}.heading{font-family:var(--sc-font-sans);display:flex;flex-wrap:wrap;gap:1em;align-items:center;justify-content:space-between}.heading__text{display:grid;flex:1;gap:calc(var(--sc-dashboard-module-spacing, 1em) / 2)}@media screen and (min-width: 720px){.heading{gap:2em}}.heading__title{font-size:var(--sc-dashbaord-module-heading-size, var(--sc-font-size-x-large));font-weight:var(--sc-dashbaord-module-heading-weight, var(--sc-font-weight-bold));line-height:var(--sc-dashbaord-module-heading-line-height, var(--sc-line-height-dense));white-space:nowrap}.heading__description{font-size:var(--sc-font-size-normal);line-height:var(--sc-line-height-dense);opacity:0.85}";
+const ScDashboardModuleStyle0 = scDashboardModuleCss;
+
+const ScDashboardModule = class {
+    constructor(hostRef) {
+        registerInstance(this, hostRef);
+        this.heading = undefined;
+        this.error = undefined;
+        this.loading = undefined;
+    }
+    render() {
+        return (h("div", { key: '012ba04f3564bb748e2a5bdcc55b62d97640a144', class: "dashboard-module", part: "base" }, !!this.error && (h("sc-alert", { key: 'dc5f12e5b763f0eca4c81747dace157ba29237f1', exportparts: "base:error__base, icon:error__icon, text:error__text, title:error__title, message:error__message", open: !!this.error, type: "danger" }, h("span", { key: '8f85b79b60efca6daa22c12caa4b2c15dd8fe3ee', slot: "title" }, wp.i18n.__('Error', 'surecart')), this.error)), h("div", { key: '4fe82d45e7449ff79ff39a0781768828b60053a0', class: "heading", part: "heading" }, h("div", { key: '5c225cebd854beacc3ae4cbf26e142a6d4aee5bf', class: "heading__text", part: "heading-text" }, h("div", { key: 'c5e63ffac581a1b9f2bc2f891191f6f91cae5743', class: "heading__title", part: "heading-title" }, h("slot", { key: '02dfa41420765e75638e1b3ada3fea1160f45f1a', name: "heading", "aria-label": this.heading }, this.heading)), h("div", { key: '52ca31dea72bacbd7513e609e7182565805b6e1a', class: "heading__description", part: "heading-description" }, h("slot", { key: '0a3c22df56fcd904edaff811ddadde998798afbe', name: "description" }))), h("slot", { key: '94e48332610efa7555d7e3865d312686d80bffd3', name: "end" })), h("slot", { key: '851da089a17f72ccfc9fbf73cce8fb3a0dec62e4' })));
+    }
+};
+ScDashboardModule.style = ScDashboardModuleStyle0;
+
+export { ScCard as sc_card, ScDashboardModule as sc_dashboard_module };
+
+//# sourceMappingURL=sc-card_2.entry.js.map

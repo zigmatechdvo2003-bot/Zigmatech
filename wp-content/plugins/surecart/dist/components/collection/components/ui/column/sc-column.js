@@ -1,0 +1,1 @@
+import{Host,h}from"@stencil/core";export class ScColumn{render(){return h(Host,{key:"8ab96e957036e0795045a46066acda9b6688d838"},h("slot",{key:"e3aaacb8d230b2d9590a3f65053c7d4f2dc1144a"}))}static get is(){return"sc-column"}static get encapsulation(){return"shadow"}static get originalStyleUrls(){return{$:["sc-column.css"]}}static get styleUrls(){return{$:["sc-column.css"]}}}
